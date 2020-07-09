@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rent Predictor</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+<body>
+	
+			<div id="logo">
+				<a href="index.html"><img src="static/images/BrazilLogo.png" alt="LOGO"></a>
+			</div>
+			
+	<div id="contents">
+		<div id="contact" class="wrapper clearfix">
+			<div id="sidebar">
+				<ul>
+					<li>
+						<a href="blog.html"><img src="static/images/BrazilPic.png" alt="Img" height="154" width="213"></a>
+					</li>
+					<li>
+						<a href="blog.html"><img src="static/images/BrazilPic1.jpg" alt="Img" height="154" width="213"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="main">
+				<h1>Rent Predictor for Apartments in Brazil</h1>
+				<form action="{{ url_for('predict')}}" method="post">
+					<ul>
+						<li>
+						    <label>Apartment Location in a City?</label> 
+                          <!-- 	<input type="text" name="city" placeholder="City" required="required" /> -->
+                            <select name="City" id="city">
+                               <option value="1">Yes</option>
+                               <option value="0">No</option> 
+                           </select>
+                            
+						<!--	<input type="text" value="City" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}"> -->
+						</li>
+						<li>
+							<label>Enter size of area</label>
+							<input type="text" name="area" placeholder="Area" required="required" />
+						</li>
+						<li>
+							<label>Enter number of rooms</label>
+							<input type="text" name="rooms" placeholder="Rooms" required="required" />
+
+						</li>
+						<li>
+							<label>Enter number of bathrooms</label>
+							<input type="text" name="bathroom" placeholder="bathrooms" required="required" />
+
+						</li>
+						<li>
+							<label>Enter number of parking spaces</label>
+							<input type="text" name="parking spaces" placeholder="Parking Spaces" required="required" />
+						</li>
+						<li>
+							<label>Enter number of floors</label>
+							<input type="text" name="floor" placeholder="Floor" required="required" />
+						</li>
+						<li>
+    						<label>Apartment must allow animals?</label>
+							<select name="Animal" id="animal">
+                               <option value="1">Yes</option>
+                               <option value="0">No</option> 
+                           </select>
+                            
+						</li>
+						<li>
+    						<label>Apartment must be furnished?</label>
+							<select name="Furniture" id="furniture">
+                               <option value="1">Yes</option>
+                               <option value="0">No</option> 
+                           </select>
+                            
+						</li>
+						<li>
+                            
+							<div class="checkbox">
+								
+							<br>
+								
+							</div>
+							<input type="submit" value="Predict" class="btn3">
+						</li>
+					</ul>
+				</form>
+				{{ prediction_text }}
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

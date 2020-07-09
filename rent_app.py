@@ -20,7 +20,7 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template('contact.html', prediction_text='Brazilian Apartment Cost $ {}'.format(output))
+    return render_template('contact.html', prediction_text='The Rent Amount is ${}'.format(output))
 
 
 if __name__ == "__main__":

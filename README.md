@@ -1,2 +1,2 @@
 # Rent_Predictor_App
-This repository is used to implement a rent predictor app
+Rent Predictor App: https://rent-predictor-app.herokuapp.com/
